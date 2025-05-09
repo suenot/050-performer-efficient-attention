@@ -1,0 +1,154 @@
+warning: method `get_encoding` is never used
+   --> src/model/embedding.rs:116:12
+    |
+ 75 | impl PositionalEncoding {
+    | ----------------------- method in this implementation
+...
+116 |     pub fn get_encoding(&self, pos: usize) -> Option<ndarray::ArrayView1<f64>> {
+    |            ^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: struct `LearnablePositionalEmbedding` is never constructed
+   --> src/model/embedding.rs:127:12
+    |
+127 | pub struct LearnablePositionalEmbedding {
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: associated items `new`, `forward`, `embeddings`, and `set_embeddings` are never used
+   --> src/model/embedding.rs:138:12
+    |
+136 | impl LearnablePositionalEmbedding {
+    | --------------------------------- associated items in this implementation
+137 |     /// Create learnable positional embedding
+138 |     pub fn new(d_model: usize, max_len: usize) -> Self {
+    |            ^^^
+...
+151 |     pub fn forward(&self, x: &Array3<f64>) -> Array3<f64> {
+    |            ^^^^^^^
+...
+169 |     pub fn embeddings(&self) -> &Array2<f64> {
+    |            ^^^^^^^^^^
+...
+174 |     pub fn set_embeddings(&mut self, embeddings: Array2<f64>) {
+    |            ^^^^^^^^^^^^^^
+
+warning: field `dropout` is never read
+  --> src/model/performer.rs:30:5
+   |
+12 | pub struct PerformerEncoderLayer {
+   |            --------------------- field in this struct
+...
+30 |     dropout: f64,
+   |     ^^^^^^^
+   |
+   = note: `PerformerEncoderLayer` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/model/embedding.rs:116:25
+    |
+116 |     pub fn get_encoding(&self, pos: usize) -> Option<ndarray::ArrayView1<f64>> {
+    |                         ^^^^^                        ^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                         |
+    |                         the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+    |
+116 |     pub fn get_encoding(&self, pos: usize) -> Option<ndarray::ArrayView1<'_, f64>> {
+    |                                                                          +++
+
+   Compiling performer v0.1.0 (/tmp/gh-issue-solver-1768781214133/52_performer_efficient_attention/rust)
+warning: `performer` (lib) generated 5 warnings (run `cargo fix --lib -p performer` to apply 1 suggestion)
+warning: unused import: `super::*`
+   --> src/api/client.rs:296:9
+    |
+296 |     use super::*;
+    |         ^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `Features`
+   --> src/model/performer.rs:314:35
+    |
+314 |     use crate::data::{DataLoader, Features};
+    |                                   ^^^^^^^^
+
+warning: methods `embeddings` and `set_embeddings` are never used
+   --> src/model/embedding.rs:169:12
+    |
+136 | impl LearnablePositionalEmbedding {
+    | --------------------------------- methods in this implementation
+...
+169 |     pub fn embeddings(&self) -> &Array2<f64> {
+    |            ^^^^^^^^^^
+...
+174 |     pub fn set_embeddings(&mut self, embeddings: Array2<f64>) {
+    |            ^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `performer` (lib test) generated 5 warnings (2 duplicates) (run `cargo fix --lib -p performer --tests` to apply 2 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.85s
+     Running unittests src/lib.rs (target/debug/deps/performer-d24fdb1df485db75)
+
+running 48 tests
+test api::types::tests::test_kline_returns ... ok
+test api::types::tests::test_kline_from_bybit_array ... ok
+test api::types::tests::test_orderbook_calculations ... ok
+test data::features::tests::test_features_from_klines ... ok
+test data::features::tests::test_features_normalize ... ok
+test data::features::tests::test_mean_std ... ok
+test data::features::tests::test_rsi ... ok
+test data::features::tests::test_train_test_split ... ok
+test data::dataset::tests::test_get_batch ... ok
+test data::dataset::tests::test_train_test_split ... ok
+test data::loader::tests::test_data_loader_insufficient_data ... ok
+test data::dataset::tests::test_iter_batches ... ok
+test data::dataset::tests::test_dataset_from_features ... ok
+test data::loader::tests::test_prepare_features ... ok
+test data::loader::tests::test_data_loader_builder ... ok
+test model::attention::tests::test_favor_plus_attention_causal ... ok
+test model::attention::tests::test_orthogonal_features ... ok
+test data::loader::tests::test_data_loader_custom ... ok
+test model::config::tests::test_default_config ... ok
+test model::config::tests::test_invalid_config ... ok
+test model::config::tests::test_small_config ... ok
+test model::attention::tests::test_attention_stats ... ok
+test model::attention::tests::test_positive_feature_map ... ok
+test model::embedding::tests::test_positional_encoding_values ... ok
+test model::embedding::tests::test_token_embedding ... ok
+test model::embedding::tests::test_positional_encoding ... ok
+test data::loader::tests::test_data_loader_default ... ok
+test model::attention::tests::test_favor_plus_attention_shape ... ok
+test model::embedding::tests::test_learnable_positional_embedding ... ok
+test model::performer::tests::test_gelu ... ok
+test model::attention::tests::test_feature_redraw ... ok
+test strategy::backtest::tests::test_backtest_basic ... ok
+test strategy::backtest::tests::test_backtest_metrics ... ok
+test strategy::backtest::tests::test_backtest_no_signals ... ok
+test strategy::backtest::tests::test_backtest_result_summary ... ok
+test strategy::signals::tests::test_generate_batch ... ok
+test strategy::signals::tests::test_hold_signal ... ok
+test strategy::signals::tests::test_position_size_scaling ... ok
+test strategy::signals::tests::test_signal_creation ... ok
+test strategy::signals::tests::test_signal_generator_hold_low_confidence ... ok
+test strategy::signals::tests::test_signal_generator_hold_small_return ... ok
+test strategy::signals::tests::test_signal_generator_long ... ok
+test strategy::signals::tests::test_signal_generator_short ... ok
+test model::performer::tests::test_encoder_layer ... ok
+test model::performer::tests::test_compute_loss ... ok
+test model::performer::tests::test_performer_model ... ok
+test model::performer::tests::test_encoder ... ok
+test model::performer::tests::test_model_predict ... ok
+
+test result: ok. 48 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 9.54s
+
+   Doc-tests performer
+
+running 1 test
+test src/lib.rs - (line 22) - compile ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+

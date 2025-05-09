@@ -1,0 +1,279 @@
+    Updating crates.io index
+     Locking 266 packages to latest compatible versions
+      Adding generic-array v0.14.7 (available: v0.14.9)
+      Adding indicatif v0.17.11 (available: v0.18.3)
+      Adding nalgebra v0.32.6 (available: v0.34.1)
+      Adding ndarray v0.15.6 (available: v0.17.2)
+      Adding ndarray-rand v0.14.0 (available: v0.16.0)
+      Adding rand v0.8.5 (available: v0.9.2)
+      Adding rand_distr v0.4.3 (available: v0.5.1)
+      Adding reqwest v0.11.27 (available: v0.13.1)
+      Adding statrs v0.16.1 (available: v0.18.0)
+      Adding thiserror v1.0.69 (available: v2.0.18)
+   Compiling proc-macro2 v1.0.105
+   Compiling unicode-ident v1.0.22
+   Compiling quote v1.0.43
+   Compiling libc v0.2.180
+   Compiling cfg-if v1.0.4
+   Compiling shlex v1.3.0
+   Compiling find-msvc-tools v0.1.8
+   Compiling autocfg v1.5.0
+   Compiling libm v0.2.15
+   Compiling cc v1.2.53
+   Compiling memchr v2.7.6
+   Compiling smallvec v1.15.1
+   Compiling num-traits v0.2.19
+   Compiling pin-project-lite v0.2.16
+   Compiling stable_deref_trait v1.2.1
+   Compiling syn v2.0.114
+   Compiling parking_lot_core v0.9.12
+   Compiling once_cell v1.21.3
+   Compiling bytes v1.11.0
+   Compiling getrandom v0.2.17
+   Compiling typenum v1.19.0
+   Compiling scopeguard v1.2.0
+   Compiling lock_api v0.4.14
+   Compiling errno v0.3.14
+   Compiling vcpkg v0.2.15
+   Compiling serde_core v1.0.228
+   Compiling futures-sink v0.3.31
+   Compiling itoa v1.0.17
+   Compiling futures-core v0.3.31
+   Compiling pkg-config v0.3.32
+   Compiling parking_lot v0.12.5
+   Compiling signal-hook-registry v1.4.8
+   Compiling ring v0.17.14
+   Compiling mio v1.1.1
+   Compiling socket2 v0.6.1
+   Compiling openssl-sys v0.9.111
+   Compiling log v0.4.29
+   Compiling zerocopy v0.8.33
+   Compiling futures-channel v0.3.31
+   Compiling pin-utils v0.1.0
+   Compiling slab v0.4.11
+   Compiling futures-task v0.3.31
+   Compiling futures-io v0.3.31
+   Compiling writeable v0.6.2
+   Compiling litemap v0.8.1
+   Compiling version_check v0.9.5
+   Compiling num-complex v0.4.6
+   Compiling generic-array v0.14.7
+   Compiling matrixmultiply v0.3.10
+   Compiling synstructure v0.13.2
+   Compiling bytemuck v1.24.0
+   Compiling icu_normalizer_data v2.1.1
+   Compiling untrusted v0.9.0
+   Compiling serde v1.0.228
+   Compiling icu_properties_data v2.1.2
+   Compiling fnv v1.0.7
+   Compiling paste v1.0.15
+   Compiling http v0.2.12
+   Compiling ppv-lite86 v0.2.21
+   Compiling safe_arch v0.7.4
+   Compiling num-integer v0.1.46
+   Compiling rand_core v0.6.4
+   Compiling tracing-core v0.1.36
+   Compiling zerofrom-derive v0.1.6
+   Compiling yoke-derive v0.8.1
+   Compiling zerovec-derive v0.11.2
+   Compiling displaydoc v0.2.5
+   Compiling tokio-macros v2.6.0
+   Compiling futures-macro v0.3.31
+   Compiling serde_derive v1.0.228
+   Compiling tracing-attributes v0.1.31
+   Compiling zerofrom v0.1.6
+   Compiling tokio v1.49.0
+   Compiling yoke v0.8.1
+   Compiling zerovec v0.11.5
+   Compiling futures-util v0.3.31
+   Compiling tinystr v0.8.2
+   Compiling icu_locale_core v2.1.1
+   Compiling potential_utf v0.1.4
+   Compiling zerotrie v0.2.3
+   Compiling icu_collections v2.1.1
+   Compiling rawpointer v0.2.1
+   Compiling equivalent v1.0.2
+   Compiling openssl v0.10.75
+   Compiling httparse v1.10.1
+   Compiling icu_provider v2.1.1
+   Compiling hashbrown v0.16.1
+   Compiling foreign-types-shared v0.1.1
+   Compiling foreign-types v0.3.2
+   Compiling tracing v0.1.44
+   Compiling rand_chacha v0.3.1
+   Compiling openssl-macros v0.1.1
+   Compiling indexmap v2.13.0
+   Compiling wide v0.7.33
+   Compiling approx v0.5.1
+   Compiling try-lock v0.2.5
+   Compiling rustls v0.21.12
+   Compiling syn v1.0.109
+   Compiling native-tls v0.2.14
+   Compiling utf8parse v0.2.2
+   Compiling bitflags v2.10.0
+   Compiling anstyle-parse v0.2.7
+   Compiling want v0.3.1
+   Compiling icu_properties v2.1.2
+   Compiling icu_normalizer v2.1.1
+   Compiling rand v0.8.5
+   Compiling tokio-util v0.7.18
+   Compiling sct v0.7.1
+   Compiling rustls-webpki v0.101.7
+   Compiling http-body v0.4.6
+   Compiling socket2 v0.5.10
+   Compiling h2 v0.3.27
+   Compiling aho-corasick v1.1.4
+   Compiling regex-syntax v0.8.8
+   Compiling colorchoice v1.0.4
+   Compiling percent-encoding v2.3.2
+   Compiling anstyle v1.0.13
+   Compiling anstyle-query v1.1.5
+   Compiling zmij v1.0.15
+   Compiling openssl-probe v0.1.6
+   Compiling tower-service v0.3.3
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling httpdate v1.0.3
+   Compiling hyper v0.14.32
+   Compiling anstream v0.6.21
+   Compiling regex-automata v0.4.13
+   Compiling form_urlencoded v1.2.2
+   Compiling idna_adapter v1.2.1
+   Compiling rand_distr v0.4.3
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling num-rational v0.4.2
+   Compiling portable-atomic v1.13.0
+   Compiling ryu v1.0.22
+   Compiling utf8_iter v1.0.4
+   Compiling subtle v2.6.1
+   Compiling serde_json v1.0.149
+   Compiling digest v0.10.7
+   Compiling idna v1.1.0
+   Compiling tokio-rustls v0.24.1
+   Compiling regex v1.12.2
+   Compiling tokio-native-tls v0.3.1
+   Compiling simba v0.6.0
+   Compiling heck v0.5.0
+   Compiling strsim v0.11.1
+   Compiling thiserror v1.0.69
+   Compiling anyhow v1.0.100
+   Compiling clap_lex v0.7.7
+   Compiling unicode-width v0.2.2
+   Compiling base64 v0.21.7
+   Compiling rustls-pemfile v1.0.4
+   Compiling nalgebra-macros v0.1.0
+   Compiling console v0.15.11
+   Compiling clap_builder v4.5.54
+   Compiling clap_derive v4.5.49
+   Compiling hyper-tls v0.5.0
+   Compiling env_filter v0.1.4
+   Compiling hyper-rustls v0.24.2
+   Compiling url v2.5.8
+   Compiling serde_urlencoded v0.7.1
+   Compiling simba v0.8.1
+   Compiling ndarray v0.15.6
+   Compiling futures-executor v0.3.31
+   Compiling nalgebra v0.29.0
+   Compiling nalgebra-macros v0.2.2
+   Compiling thiserror-impl v1.0.69
+   Compiling csv-core v0.1.13
+   Compiling encoding_rs v0.8.35
+   Compiling ipnet v2.11.0
+   Compiling jiff v0.2.18
+   Compiling mime v0.3.17
+   Compiling lazy_static v1.5.0
+   Compiling webpki-roots v0.25.4
+   Compiling number_prefix v0.4.0
+   Compiling sync_wrapper v0.1.2
+   Compiling iana-time-zone v0.1.64
+   Compiling cpufeatures v0.2.17
+   Compiling sha2 v0.10.9
+   Compiling indicatif v0.17.11
+   Compiling chrono v0.4.43
+   Compiling reqwest v0.11.27
+   Compiling nalgebra v0.32.6
+   Compiling ndarray-rand v0.14.0
+   Compiling csv v1.4.0
+   Compiling clap v4.5.54
+   Compiling futures v0.3.31
+   Compiling hmac v0.12.1
+   Compiling hex v0.4.3
+   Compiling env_logger v0.11.8
+   Compiling statrs v0.16.1
+   Compiling performer v0.1.0 (/tmp/gh-issue-solver-1768781214133/52_performer_efficient_attention/rust)
+warning: unused import: `Array2`
+ --> src/data/dataset.rs:3:15
+  |
+3 | use ndarray::{Array2, Array3};
+  |               ^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `Axis`
+  --> src/model/attention.rs:10:39
+   |
+10 | use ndarray::{Array2, Array3, Array4, Axis};
+   |                                       ^^^^
+
+error[E0283]: type annotations needed for `ArrayBase<OwnedRepr<_>, Dim<[usize; 2]>>`
+   --> src/model/attention.rs:250:13
+    |
+250 |         let mut s = Array2::zeros((self.num_features, head_dim));
+    |             ^^^^^   -------------------------------------------- type must be known at this point
+    |
+    = note: cannot satisfy `_: Clone`
+note: required by a bound in `ndarray::impl_constructors::<impl ArrayBase<S, D>>::zeros`
+   --> /home/hive/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ndarray-0.15.6/src/impl_constructors.rs:342:12
+    |
+340 |     pub fn zeros<Sh>(shape: Sh) -> Self
+    |            ----- required by a bound in this associated function
+341 |     where
+342 |         A: Clone + Zero,
+    |            ^^^^^ required by this bound in `ndarray::impl_constructors::<impl ArrayBase<S, D>>::zeros`
+help: consider giving `s` an explicit type, where the type for type parameter `A` is specified
+    |
+250 |         let mut s: ArrayBase<OwnedRepr<A>, _> = Array2::zeros((self.num_features, head_dim));
+    |                  ++++++++++++++++++++++++++++
+
+error[E0283]: type annotations needed for `ArrayBase<OwnedRepr<_>, Dim<[usize; 2]>>`
+   --> src/model/attention.rs:250:13
+    |
+250 |         let mut s = Array2::zeros((self.num_features, head_dim));
+    |             ^^^^^
+...
+257 |                     s[[m, d]] += k_prime[[t, m]] * v[[t, d]];
+    |                               -- type must be known at this point
+    |
+    = note: multiple `impl`s satisfying `_: AddAssign<f64>` found in the following crates: `core`, `ndarray`, `num_complex`, `zerocopy`:
+            - impl AddAssign for f64;
+            - impl<A, S, D> AddAssign<A> for ArrayBase<S, D>
+              where <S as RawData>::Elem == A, A: ScalarOperand, A: AddAssign, S: DataMut, D: Dimension;
+            - impl<O> AddAssign<f64> for zerocopy::byteorder::F64<O>
+              where O: zerocopy::byteorder::ByteOrder;
+            - impl<T> AddAssign<T> for num_complex::Complex<T>
+              where T: Clone, T: num_traits::NumAssign;
+help: consider giving `s` an explicit type, where the type for type parameter `A` is specified
+    |
+250 |         let mut s: ArrayBase<OwnedRepr<A>, _> = Array2::zeros((self.num_features, head_dim));
+    |                  ++++++++++++++++++++++++++++
+
+error[E0283]: type annotations needed for `ArrayBase<OwnedRepr<_>, Dim<[usize; 2]>>`
+   --> src/model/attention.rs:250:13
+    |
+250 |         let mut s = Array2::zeros((self.num_features, head_dim));
+    |             ^^^^^
+...
+266 |                         .map(|m| q_prime[[t, m]] * s[[m, d]])
+    |                                                  - type must be known at this point
+    |
+    = note: multiple `impl`s satisfying `f64: Mul<_>` found in the following crates: `core`, `num_complex`:
+            - impl Mul for f64;
+            - impl Mul<num_complex::Complex<f64>> for f64;
+help: consider giving `s` an explicit type, where the placeholders `_` are specified
+    |
+250 |         let mut s: ArrayBase<OwnedRepr<A>, _> = Array2::zeros((self.num_features, head_dim));
+    |                  ++++++++++++++++++++++++++++
+
+For more information about this error, try `rustc --explain E0283`.
+warning: `performer` (lib) generated 2 warnings
+error: could not compile `performer` (lib) due to 3 previous errors; 2 warnings emitted

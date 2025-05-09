@@ -1,0 +1,94 @@
+   Compiling performer v0.1.0 (/tmp/gh-issue-solver-1768781214133/52_performer_efficient_attention/rust)
+warning: method `get_encoding` is never used
+   --> src/model/embedding.rs:116:12
+    |
+ 75 | impl PositionalEncoding {
+    | ----------------------- method in this implementation
+...
+116 |     pub fn get_encoding(&self, pos: usize) -> Option<ndarray::ArrayView1<f64>> {
+    |            ^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: struct `LearnablePositionalEmbedding` is never constructed
+   --> src/model/embedding.rs:127:12
+    |
+127 | pub struct LearnablePositionalEmbedding {
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: associated items `new`, `forward`, `embeddings`, and `set_embeddings` are never used
+   --> src/model/embedding.rs:138:12
+    |
+136 | impl LearnablePositionalEmbedding {
+    | --------------------------------- associated items in this implementation
+137 |     /// Create learnable positional embedding
+138 |     pub fn new(d_model: usize, max_len: usize) -> Self {
+    |            ^^^
+...
+151 |     pub fn forward(&self, x: &Array3<f64>) -> Array3<f64> {
+    |            ^^^^^^^
+...
+169 |     pub fn embeddings(&self) -> &Array2<f64> {
+    |            ^^^^^^^^^^
+...
+174 |     pub fn set_embeddings(&mut self, embeddings: Array2<f64>) {
+    |            ^^^^^^^^^^^^^^
+
+warning: field `dropout` is never read
+  --> src/model/performer.rs:30:5
+   |
+12 | pub struct PerformerEncoderLayer {
+   |            --------------------- field in this struct
+...
+30 |     dropout: f64,
+   |     ^^^^^^^
+   |
+   = note: `PerformerEncoderLayer` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/model/embedding.rs:116:25
+    |
+116 |     pub fn get_encoding(&self, pos: usize) -> Option<ndarray::ArrayView1<f64>> {
+    |                         ^^^^^                        ^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                         |
+    |                         the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+    |
+116 |     pub fn get_encoding(&self, pos: usize) -> Option<ndarray::ArrayView1<'_, f64>> {
+    |                                                                          +++
+
+warning: `performer` (lib) generated 5 warnings (run `cargo fix --lib -p performer` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.08s
+   Doc-tests performer
+
+running 1 test
+test src/lib.rs - (line 22) - compile ... FAILED
+
+failures:
+
+---- src/lib.rs - (line 22) stdout ----
+error[E0596]: cannot borrow `model` as mutable, as it is not declared as mutable
+  --> src/lib.rs:49:23
+   |
+29 |     let predictions = model.predict(&dataset);
+   |                       ^^^^^ cannot borrow as mutable
+   |
+help: consider changing this to be mutable
+   |
+26 |     let mut model = PerformerModel::new(config);
+   |         +++
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0596`.
+Couldn't compile the test.
+
+failures:
+    src/lib.rs - (line 22)
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+
+error: doctest failed, to rerun pass `--doc`
